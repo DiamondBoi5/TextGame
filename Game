@@ -1,0 +1,61 @@
+print("Hello")
+
+name = input("What is your name? ")
+
+print("Welcome, %s, Time to Play!!" % name)
+
+print("You are in a dark room. There is a door to your left and right. Which one do you take?")
+door = input("> ")
+door = door.lower()
+while door not in ("left", "right"):
+    print("Please choose left or right.")
+    door = input("> ").lower()
+
+if door == "left":
+    print("There is a giant bear here. Looks hungry...")
+    print("1. Talk to the bear.")
+    print("2. RUN.")
+    bear = input("> ")
+    while bear not in ("1", "2"):
+        print("Please choose 1 or 2.")
+        bear = input("> ")
+
+    if bear == "1":
+        print("You think the bear might be friendly. The bear seems to like you.... It then bites off your face. ending 2/4")
+    elif bear == "2":
+        print("You try to run but the bear is faster than you... but it doesn't matter cause it never saw you.")
+        print("What now?")
+        print("1. Right door time.")
+        print("2. Why am I here?")
+        choice2 = input("> ")
+        while choice2 not in ("1", "2"):
+            print("Please choose 1 or 2.")
+            choice2 = input("> ")
+
+        if choice2 == "1":
+            print("You find a treasure chest full of gold. You win!")
+            print("Congratulations, %s! you win ending 1 of 4" % name)
+        elif choice2 == "2":
+            print("You start to question your existence and the meaning of life.")
+            print("You start getting hungry.")
+            print("1. Eat your arm.")
+            print("2. Eat the bear.")
+            food = input("> ")
+            while food not in ("1", "2"):
+                print("Please choose 1 or 2.")
+                food = input("> ")
+
+            if food == "1":
+                print("You eat your arm but it doesn't satisfy your hunger. Also you didn't have to eat your arm,")
+                print("could have just gone through the right door. but now you bleed to death. Ending 3 of 4.")
+            elif food == "2":
+                print("You turn around to eat the bear. The bear starved to death so you get to feast! still dont know why you're here...")
+                print("Now what?")
+                whatnow = input("> ")
+                print("you begin to %s. Unfortunately you're stopped as the room around you begins to spin and disappear." % whatnow)
+                print("To be continued later...")
+                game = input("> ")
+
+elif door == "right":
+    print("You find a treasure chest full of gold. You win!")
+    print("Congratulations, %s! you win ending 1 of 4" % name)

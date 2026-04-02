@@ -1,13 +1,13 @@
 print("Hello")
 
-name = input("What is your name? ")
+name = input("What is your name? ") #prompt 1
 
 print("Welcome, %s, Time to Play!!" % name)
 
 print("You are in a dark room. There is a door to your left and right. Which one do you take?")
-door = input("> ")
+door = input("> ") #prompt 2
 door = door.lower()
-while door not in ("left", "right"):
+while door not in ("left", "right"): #prompt 3
     print("Please choose left or right.")
     door = input("> ").lower()
 
@@ -16,7 +16,7 @@ if door == "left":
     print("1. Talk to the bear.")
     print("2. RUN.")
     bear = input("> ")
-    while bear not in ("1", "2"):
+    while bear not in ("1", "2"): #prompt 4
         print("Please choose 1 or 2.")
         bear = input("> ")
 
@@ -28,7 +28,7 @@ if door == "left":
         print("1. Right door time.")
         print("2. Why am I here?")
         choice2 = input("> ")
-        while choice2 not in ("1", "2"):
+        while choice2 not in ("1", "2"): #prompt 5
             print("Please choose 1 or 2.")
             choice2 = input("> ")
 
@@ -41,7 +41,7 @@ if door == "left":
             print("1. Eat your arm.")
             print("2. Eat the bear.")
             food = input("> ")
-            while food not in ("1", "2"):
+            while food not in ("1", "2"): #prompt 6
                 print("Please choose 1 or 2.")
                 food = input("> ")
 
@@ -53,8 +53,19 @@ if door == "left":
                 print("Now what?")
                 whatnow = input("> ")
                 print("you begin to %s. Unfortunately you're stopped as the room around you begins to spin and disappear." % whatnow)
-                print("To be continued later...")
-                game = input("> ")
+                print("1. Try to hold on.")
+                print("2. Let it happen.")
+                room = input("> ") #prompt 7
+                while room not in ("1", "2"): #prompt 8
+                    print("Please choose 1 or 2.")
+                    room = input("> ")
+
+                if room == "1":
+                    print(".")
+                elif room == "2":
+                    print(" ")
+                    print(" ")
+
 
 elif door == "right":
     print("You find a treasure chest full of gold. You win!")

@@ -16,12 +16,12 @@ if door == "left":
     print("1. Talk to the bear.")
     print("2. RUN.")
     bear = input("> ")
-    while bear not in ("1", "2"): #prompt 4
+    while bear not in ("1", "2"): #prompt 6
         print("Please choose 1 or 2.")
         bear = input("> ")
 
     if bear == "1":
-        print("You think the bear might be friendly. The bear seems to like you.... It then bites off your face. ending 2/4")
+        print("You think the bear might be friendly. The bear seems to like you.... It then bites off your face. ending 2/6")
     elif bear == "2":
         print("You try to run but the bear is faster than you... but it doesn't matter cause it never saw you.")
         print("What now?")
@@ -34,39 +34,53 @@ if door == "left":
 
         if choice2 == "1":
             print("You find a treasure chest full of gold. You win!")
-            print("Congratulations, %s! you win ending 1 of 4" % name)
+            print("Congratulations, %s! you win ending 1 of 6" % name)
         elif choice2 == "2":
             print("You start to question your existence and the meaning of life.")
             print("You start getting hungry.")
-            print("1. Eat your arm.")
-            print("2. Eat the bear.")
+            print("1. Eat the bear.")
+            print("2. Eat your arm.")
             food = input("> ")
             while food not in ("1", "2"): #prompt 6
                 print("Please choose 1 or 2.")
                 food = input("> ")
 
-            if food == "1":
+            if food == "2":
                 print("You eat your arm but it doesn't satisfy your hunger. Also you didn't have to eat your arm,")
-                print("could have just gone through the right door. but now you bleed to death. Ending 3 of 4.")
-            elif food == "2":
+                print("could have just gone through the right door. but now you bleed to death. Ending 3 of 6.")
+            elif food == "1":
                 print("You turn around to eat the bear. The bear starved to death so you get to feast! still dont know why you're here...")
                 print("Now what?")
-                whatnow = input("> ")
+                whatnow = input("> ") #prompt 7
                 print("you begin to %s. Unfortunately you're stopped as the room around you begins to spin and disappear." % whatnow)
                 print("1. Try to hold on.")
                 print("2. Let it happen.")
-                room = input("> ") #prompt 7
-                while room not in ("1", "2"): #prompt 8
+                room = input("> ") #prompt 8
+                while room not in ("1", "2"): #prompt 9
                     print("Please choose 1 or 2.")
                     room = input("> ")
 
                 if room == "1":
-                    print(".")
+                    print("While trying to hold on, the world around you dissolves into nothingness.")
+                    print("You struggle to make sense of your surroundings. Eventually, you succumb to the emptiness and fade away. Ending 4 of 6.")
                 elif room == "2":
-                    print(" ")
-                    print(" ")
+                    print("You let go and embrace the unknown. As you surrender to the spinning and disappearing room, you find yourself in a new realm of existence.")
+                    print("You hear a voice calling your name, '%s, You Have only one try left to win the game. Choose wisely.' The voice then gives you two options:" % name)
+                    print("1. Enter the left door.")
+                    print("2. Enter the right door.")
+                    finaldoor = input("> ") 
+                    while finaldoor not in ("1", "2"): #prompt 10
+                        print("Please choose 1 or 2.")
+                        finaldoor = input("> ")
+
+                    if finaldoor == "1":
+                        print("You enter the left door and find yourself in a room filled with darkness. You can't see anything, but you can feel a presence watching you.")
+                        print("Suddenly, you hear a voice whispering in your ear, 'I am sorry %s, you have failed to learn your mistakes.' you then get killed by a bear. Ending 5 of 6." % name)
+                    elif finaldoor == "2":
+                        print("You enter the right door and find yourself in a room filled with light. You see a figure standing in the distance, beckoning you to come closer.")
+                        print("As you approach the figure, it reveals itself to be an old bear who congratulates you on winning the game. Ending 6 of 6.")
 
 
 elif door == "right":
     print("You find a treasure chest full of gold. You win!")
-    print("Congratulations, %s! you win ending 1 of 4" % name)
+    print("Congratulations, %s! you win ending 1 of 6" % name)

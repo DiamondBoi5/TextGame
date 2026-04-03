@@ -16,7 +16,7 @@ if door == "left":
     print("1. Talk to the bear.")
     print("2. RUN.")
     bear = input("> ")
-    while bear not in ("1", "2"): #prompt 6
+    while bear not in ("1", "2"): #prompt 4
         print("Please choose 1 or 2.")
         bear = input("> ")
 
